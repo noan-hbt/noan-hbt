@@ -1,0 +1,45 @@
+[
+  {
+    "slug": "orion-agent",
+    "name": "Orion",
+    "full": true,
+    "text": "Un agent personnel toujours actif. Il vit sur ton serveur, se souvient, te prévient avant ce qui compte et n'agit qu'avec ton accord.",
+    "stack": ["Python 3.12", "Starlette", "Playwright", "auto-hébergé"]
+  },
+  {
+    "slug": "keewie",
+    "name": "Keewie",
+    "text": "Studio de création Roblox local-first : chaque changement est une opération inversible.",
+    "stack": ["Rust", "Tauri 2", "React 19", "Rojo"]
+  },
+  {
+    "slug": "rbx-studio-plus",
+    "name": "rbx-studio-plus",
+    "text": "Le serveur MCP Roblox Studio pensé pour les agents de code : scripts en fichiers, playtest en un appel.",
+    "stack": ["TypeScript", "Node 20", "MCP"]
+  },
+  {
+    "slug": "bankboard",
+    "name": "Bankboard",
+    "text": "Cockpit financier personnel : des moteurs déterministes et explicables, une IA qui explique sans jamais calculer.",
+    "stack": ["FastAPI", "Next.js 15", "PostgreSQL", "PWA"]
+  },
+  {
+    "slug": "sipp-app",
+    "name": "Sipp",
+    "text": "Apprentissage personnalisé en micro-leçons : tu dis ce que tu veux apprendre, Sipp construit le parcours.",
+    "stack": ["FastAPI", "React 19", "Vite", "PostgreSQL"]
+  },
+  {
+    "slug": "vintify",
+    "name": "Vintify",
+    "text": "Client Python typé pour l'API de Vinted, avec un bot Discord d'alertes : nouvelles annonces, baisses de prix.",
+    "stack": ["Python", "Discord", "Railway"]
+  },
+  {
+    "slug": "solana-tracker",
+    "name": "Solana Tracker",
+    "text": "Bot Discord qui suit les trades Solana et analyse les performances de wallets publics. Aucune clé privée.",
+    "stack": ["Python", "Helius", "PostgreSQL", "Discord"]
+  }
+]
