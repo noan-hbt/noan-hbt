@@ -14,6 +14,9 @@ mkdirSync(out, { recursive: true });
 
 const illus = (slug) => `data:image/jpeg;base64,${readFileSync(join(root, `scripts/src/illus/${slug}.jpg`)).toString('base64')}`;
 const projects = JSON.parse(readFileSync(join(root, 'scripts/projects.json'), 'utf8'));
+// Number of public repositories, kept up to date by .github/workflows/readme.yml.
+const repoCount = Number(readFileSync(join(root, 'scripts/repo-count.txt'), 'utf8').trim());
+if (!Number.isInteger(repoCount) || repoCount < 1) throw new Error('scripts/repo-count.txt must hold a positive integer');
 
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600&display=swap');
@@ -80,7 +83,7 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
     </div>
     <div class="tags muted"><span>AI</span><span>Tools</span><span>Apps</span></div>
   </div>
-  <div class="frame title" id="t-projects"><h2 class="anton">Projects</h2><div class="n muted">${projects.length} public repositories</div></div>
+  <div class="frame title" id="t-projects"><h2 class="anton">Projects</h2><div class="n muted">${repoCount} public repositor${repoCount === 1 ? 'y' : 'ies'}</div></div>
   <div class="frame title" id="t-toolbox"><h2 class="anton">Toolbox</h2></div>
   ${projects.map(card).join('')}
   <div class="frame foot" id="foot"><span>Noan HERBETH</span><span class="r muted">github.com/noan-hbt</span></div>
