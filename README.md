@@ -1,4 +1,4 @@
-<img src="assets/banner.jpg" alt="Noan Herbeth. I build AI agents and the tools they need." width="100%">
+<img src="assets/banner.jpg" alt="Noan Herbeth. I build things. Mostly software, mostly at night." width="100%">
 
 <img src="assets/title-projects.png" alt="Projects" width="100%">
 

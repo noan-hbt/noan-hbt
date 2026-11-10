@@ -76,9 +76,9 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
     <div class="shade"></div>
     <div class="txt">
       <h1 class="anton">Noan<br>Herbeth</h1>
-      <p>I build AI agents and the tools they need.</p>
+      <p>I build things.<br>Mostly software, mostly at night.</p>
     </div>
-    <div class="tags muted"><span>AI agents</span><span>Developer tools</span><span>Open source</span></div>
+    <div class="tags muted"><span>AI</span><span>Tools</span><span>Apps</span></div>
   </div>
   <div class="frame title" id="t-projects"><h2 class="anton">Projects</h2><div class="n muted">${projects.length} public repositories</div></div>
   <div class="frame title" id="t-toolbox"><h2 class="anton">Toolbox</h2></div>
