@@ -1,22 +1,22 @@
-<img src="assets/banner.jpg" alt="Noan Herbeth. Je construis des agents IA et les outils dont ils ont besoin." width="100%">
+<img src="assets/banner.jpg" alt="Noan Herbeth. I build AI agents and the tools they need." width="100%">
 
-<img src="assets/titre-projets.png" alt="Projets" width="100%">
+<img src="assets/title-projects.png" alt="Projects" width="100%">
 
-<a href="https://github.com/noan-hbt/orion"><img src="assets/projet-orion.jpg" alt="Orion. Un agent personnel toujours actif, sur ton propre serveur. Python 3.12, Starlette, Playwright." width="100%"></a>
+<a href="https://github.com/noan-hbt/orion"><img src="assets/project-orion.jpg" alt="Orion. An always-on personal agent on your own server. Python 3.12, Starlette, Playwright." width="100%"></a>
 
-<a href="https://github.com/noan-hbt/rbx-studio-plus"><img src="assets/projet-rbx-studio-plus.jpg" alt="rbx-studio-plus. Le serveur MCP Roblox Studio pensé pour les agents de code. TypeScript, Node 20, MCP." width="100%"></a>
+<a href="https://github.com/noan-hbt/rbx-studio-plus"><img src="assets/project-rbx-studio-plus.jpg" alt="rbx-studio-plus. The Roblox Studio MCP server built for coding agents. TypeScript, Node 20, MCP." width="100%"></a>
 
-<a href="https://github.com/noan-hbt/vintify"><img src="assets/projet-vintify.jpg" alt="Vintify. Client Python typé pour l'API de Vinted, avec un bot Discord d'alertes. Python, Discord, Railway." width="100%"></a>
+<a href="https://github.com/noan-hbt/vintify"><img src="assets/project-vintify.jpg" alt="Vintify. A typed Python client for Vinted's API, with a Discord alert bot. Python, Discord, Railway." width="100%"></a>
 
-<a href="https://github.com/noan-hbt/claude-plugins"><img src="assets/projet-claude-plugins.jpg" alt="claude-plugins. Mes extensions pour Claude Code : barre d'état d'usage et marketplace de plugins." width="100%"></a>
+<a href="https://github.com/noan-hbt/claude-plugins"><img src="assets/project-claude-plugins.jpg" alt="claude-plugins. My Claude Code extensions: a usage status line and a plugin marketplace." width="100%"></a>
 
-<img src="assets/titre-outils.png" alt="Outils" width="100%">
+<img src="assets/title-toolbox.png" alt="Toolbox" width="100%">
 
 | | |
 |---|---|
-| **Langages** | `Python` `TypeScript` `Luau` `PowerShell` |
+| **Languages** | `Python` `TypeScript` `Luau` `PowerShell` |
 | **Agents** | `MCP` `Claude Code` `Playwright` |
-| **Back** | `Starlette` `httpx` `Pydantic` |
-| **Déploiement** | `Linux` `Docker` `Railway` |
+| **Backend** | `Starlette` `httpx` `Pydantic` |
+| **Deployment** | `Linux` `Docker` `Railway` |
 
-<img src="assets/pied.png" alt="Noan Herbeth." width="100%">
+<img src="assets/footer.png" alt="Noan Herbeth." width="100%">

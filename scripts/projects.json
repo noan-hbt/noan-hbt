@@ -3,28 +3,45 @@
     "slug": "orion",
     "repo": "orion",
     "name": "Orion",
-    "text": "Un agent personnel toujours actif, sur ton propre serveur. Il se souvient, te prévient avant ce qui compte et n'agit qu'avec ton accord.",
-    "stack": ["Python 3.12", "Starlette", "Playwright", "auto-hébergé"]
+    "text": "An always-on personal agent on your own server. It remembers, warns you before what matters, and only acts with your consent.",
+    "stack": [
+      "Python 3.12",
+      "Starlette",
+      "Playwright",
+      "self-hosted"
+    ]
   },
   {
     "slug": "rbx-studio-plus",
     "repo": "rbx-studio-plus",
     "name": "rbx-studio-plus",
-    "text": "Le serveur MCP Roblox Studio pensé pour les agents de code : scripts en fichiers, sorties Luau lisibles, playtest en un appel.",
-    "stack": ["TypeScript", "Node 20", "MCP"]
+    "text": "The Roblox Studio MCP server built for coding agents: scripts as files, readable Luau output, playtests in one call.",
+    "stack": [
+      "TypeScript",
+      "Node 20",
+      "MCP"
+    ]
   },
   {
     "slug": "vintify",
     "repo": "vintify",
     "name": "Vintify",
-    "text": "Client Python typé pour l'API de Vinted, avec un bot Discord d'alertes : nouvelles annonces, baisses de prix, suivi d'articles.",
-    "stack": ["Python", "Discord", "Railway"]
+    "text": "A typed Python client for Vinted's API, with a Discord alert bot: new listings, price drops, item tracking.",
+    "stack": [
+      "Python",
+      "Discord",
+      "Railway"
+    ]
   },
   {
     "slug": "claude-plugins",
     "repo": "claude-plugins",
     "name": "claude-plugins",
-    "text": "Mes extensions pour Claude Code : une barre d'état d'usage et un marketplace de plugins à installer en une commande.",
-    "stack": ["Claude Code", "PowerShell", "plugins"]
+    "text": "My Claude Code extensions: a usage status line and a plugin marketplace you install in one command.",
+    "stack": [
+      "Claude Code",
+      "PowerShell",
+      "plugins"
+    ]
   }
 ]

@@ -1,6 +1,6 @@
-// Génère les images du README de profil (bandeau, titres, cartes projets, pied de page).
-// Usage : node scripts/build.mjs   (nécessite Playwright + Chromium)
-// Les illustrations sources sont dans scripts/src/illus/<slug>.jpg, les textes dans scripts/projects.json.
+// Builds the profile README images (banner, titles, project cards, footer).
+// Usage: node scripts/build.mjs   (needs Playwright + Chromium)
+// Source illustrations live in scripts/src/illus/<slug>.jpg, texts in scripts/projects.json.
 import { createRequire } from 'node:module';
 import { readFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -67,21 +67,21 @@ const card = (p, i) => `
       <p>${p.text}</p>
     </div>
     <div class="stack muted">${p.stack.join(' · ')}</div>
-    <div class="arrow">[voir le dépôt]</div>
+    <div class="arrow">[view repository]</div>
   </div>`;
 
-const html = `<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>${css}</style></head><body>
+const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>${css}</style></head><body>
   <div class="frame banner" id="banner">
     <div class="art"><img src="${illus('banner')}" alt=""></div>
     <div class="shade"></div>
     <div class="txt">
       <h1 class="anton">Noan<br>Herbeth</h1>
-      <p>Je construis des agents IA et les outils dont ils ont besoin.</p>
+      <p>I build AI agents and the tools they need.</p>
     </div>
-    <div class="tags muted"><span>Agents IA</span><span>Outils pour développeurs</span><span>Open source</span></div>
+    <div class="tags muted"><span>AI agents</span><span>Developer tools</span><span>Open source</span></div>
   </div>
-  <div class="frame title" id="t-projets"><h2 class="anton">Projets</h2><div class="n muted">${projects.length} dépôts publics</div></div>
-  <div class="frame title" id="t-outils"><h2 class="anton">Outils</h2></div>
+  <div class="frame title" id="t-projects"><h2 class="anton">Projects</h2><div class="n muted">${projects.length} public repositories</div></div>
+  <div class="frame title" id="t-toolbox"><h2 class="anton">Toolbox</h2></div>
   ${projects.map(card).join('')}
   <div class="frame foot" id="foot"><span>Noan HERBETH</span><span class="r muted">github.com/noan-hbt</span></div>
 </body></html>`;
@@ -90,7 +90,7 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1400, height: 900 }, deviceScaleFactor: 2 });
 await page.setContent(html, { waitUntil: 'networkidle' });
 await page.evaluate(() => document.fonts.ready);
-// Titres longs : on réduit la police jusqu'à tenir sur une ligne dans la colonne de texte.
+// Long titles: shrink the font until it fits on one line in the text column.
 await page.evaluate(() => {
   for (const h of document.querySelectorAll('.card h3')) {
     let size = 92;
@@ -101,8 +101,8 @@ await page.evaluate(() => {
 const shot = (id, file, opts = {}) => page.locator('#' + id).screenshot({ path: join(out, file), ...opts });
 const jpeg = { type: 'jpeg', quality: 84 };
 await shot('banner', 'banner.jpg', jpeg);
-for (const t of ['projets', 'outils']) await shot('t-' + t, `titre-${t}.png`);
-for (const p of projects) await shot('p-' + p.slug, `projet-${p.slug}.jpg`, jpeg);
-await shot('foot', 'pied.png');
+for (const t of ['projects', 'toolbox']) await shot('t-' + t, `title-${t}.png`);
+for (const p of projects) await shot('p-' + p.slug, `project-${p.slug}.jpg`, jpeg);
+await shot('foot', 'footer.png');
 await browser.close();
 console.log('ok →', out);
