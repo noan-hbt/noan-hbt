@@ -71,15 +71,14 @@ const html = `<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>
     <div class="shade"></div>
     <div class="txt">
       <h1 class="anton">Noan<br>Herbeth</h1>
-      <p>BTS SIO, option SISR, en alternance chez MOSS. Session 2025-2027, H3 Hitema, Paris.</p>
+      <p>Je construis des agents IA, des outils pour Roblox Studio et des applications que j'utilise vraiment.</p>
     </div>
-    <div class="tags muted"><span>Systèmes &amp; réseaux</span><span>Agents IA</span><span>Outils Roblox</span></div>
+    <div class="tags muted"><span>Agents IA</span><span>Outils Roblox</span><span>Apps</span></div>
   </div>
   <div class="frame title" id="t-projets"><h2 class="anton">Projets</h2><div class="n muted">${projects.length} dépôts publics</div></div>
   <div class="frame title" id="t-outils"><h2 class="anton">Outils</h2></div>
-  <div class="frame title" id="t-contact"><h2 class="anton">Contact</h2></div>
   ${projects.map(card).join('')}
-  <div class="frame foot" id="foot"><span>Noan HERBETH</span><span class="r muted">BTS SIO · SISR · 2025–2027</span></div>
+  <div class="frame foot" id="foot"><span>Noan HERBETH</span><span class="r muted">github.com/noan-hbt</span></div>
 </body></html>`;
 
 const browser = await chromium.launch();
@@ -89,7 +88,7 @@ await page.evaluate(() => document.fonts.ready);
 
 const shot = (id, file, opts = {}) => page.locator('#' + id).screenshot({ path: join(out, file), ...opts });
 await shot('banner', 'banner.jpg', { type: 'jpeg', quality: 86 });
-for (const t of ['projets', 'outils', 'contact']) await shot('t-' + t, `titre-${t}.png`);
+for (const t of ['projets', 'outils']) await shot('t-' + t, `titre-${t}.png`);
 for (const p of projects) await shot('p-' + p.slug, `projet-${p.slug}.png`);
 await shot('foot', 'pied.png');
 await browser.close();
